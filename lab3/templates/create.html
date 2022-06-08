@@ -1,0 +1,101 @@
+{%extends 'base.html' %}
+
+{%block content %}
+    {% if table_name %}
+    <h3>Table editing--> {{table_name}} </h3>
+    {% endif %}
+    <form class="grid" action="/create" method="POST">
+        {% if table_name == "racer" %}
+        <label for="ID">Enter new id :</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="name">Enter new name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="last_name">Enter new last_name :</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+
+        <label for="racing_id">Enter new racing_id :</label><br>
+        <input type="text" id="racing_id" name="racing_id"><br>
+
+        <label for="team">Enter new team :</label><br>
+        <input type="text" id="team" name="team"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "model" %}
+        <label for="ID">Enter new id :</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="model">Enter new model:</label><br>
+        <input type="text" id="model" name="model"><br>
+
+        <label for="brend">Enter new brend :</label><br>
+        <input type="text" id="brend" name="brend"><br>
+
+        <label for="color">Enter new color :</label><br>
+        <input type="text" id="color" name="color"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+        
+        {% if table_name == "cars" %}
+        <label for="ID">Enter new id :</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="model_id">Enter new model_id:</label><br>
+        <input type="text" id="model_id" name="model_id"><br>
+
+        <label for="cars_number">Enter new cars_number:</label><br>
+        <input type="text" id="cars_number" name="cars_number"><br>
+
+        <label for="involved">Enter new involved:</label><br>
+        <input type="bool" id="involved" name="involved"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "contract" %}
+        <label for="ID">Enter new id :</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="cars_id">Enter new cars_id:</label><br>
+        <input type="text" id="cars_id" name="cars_id"><br>
+
+        <label for="date_contract">Enter new date_contract:</label><br>
+        <input type="text" id="date_contract" name="date_contract"><br>
+
+        <label for="date_end">Enter new date_end :</label><br>
+        <input type="text" id="date_end" name="date_end"><br>
+
+        <label for="racer_id">Enter new racer_id :</label><br>
+        <input type="text" id="racer_id" name="racer_id"><br>
+
+        <label for="subscription">Enter new subscription :</label><br>
+        <input type="bool" id="subscription" name="subscription"><br>
+
+        <label for="prize">Enter new prize :</label><br>
+        <input type="text" id="prize" name="prize"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "accidens" %}
+        <label for="contract_id">Enter new contract_id :</label><br>
+        <input type="text" id="contract_id" name="contract_id"><br>
+
+        <label for="break_down">Enter new break_down :</label><br>
+        <input type="bool" id="break_down" name="break_down"><br>
+
+        <label for="result">Enter new result :</label><br>
+        <input type="text" id="result" name="result"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+    </form>
+
+    <br><a href="http://127.0.0.1:5000/">Change table</a>
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{%extends 'base.html' %}
+
+{%block content %}
+    {% if table %}
+    <h3>Table editing--> {{table}} </h3>
+    {% endif %}
+    <form class="grid" action="/update" method="POST">
+        {% if table_name == "racer" %}
+
+        <label for="name">Enter a name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="last_name">Enter a last_name :</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+
+        <label for="racing_id">Enter a racing_id :</label><br>
+        <input type="text" id="racing_id" name="racing_id"><br>
+
+        <label for="team">Enter a team :</label><br>
+        <input type="text" id="team" name="team"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "model" %}
+
+        <label for="model">Enter a model:</label><br>
+        <input type="text" id="model" name="model"><br>
+
+        <label for="brend">Enter a brend :</label><br>
+        <input type="text" id="brend" name="brend"><br>
+
+        <label for="color">Enter a color :</label><br>
+        <input type="text" id="color" name="color"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+        
+        {% if table_name == "cars" %}
+
+        <label for="model_id">Enter a model_id:</label><br>
+        <input type="text" id="model_id" name="model_id"><br>
+
+        <label for="cars_number">Enter a cars_number:</label><br>
+        <input type="text" id="cars_number" name="cars_number"><br>
+
+        <label for="involved">Enter an involved:</label><br>
+        <input type="bool" id="involved" name="involved"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "contract" %}
+
+        <label for="cars_id">Enter a cars_id:</label><br>
+        <input type="text" id="cars_id" name="cars_id"><br>
+
+        <label for="date_contract">Enter a date_contract:</label><br>
+        <input type="text" id="date_contract" name="date_contract"><br>
+
+        <label for="date_end">Enter a date_end :</label><br>
+        <input type="text" id="date_end" name="date_end"><br>
+
+        <label for="racer_id">Enter a racer_id :</label><br>
+        <input type="text" id="racer_id" name="racer_id"><br>
+
+        <label for="subscription">Enter a subscription :</label><br>
+        <input type="bool" id="subscription" name="subscription"><br>
+
+        <label for="prize">Enter a prize :</label><br>
+        <input type="text" id="prize" name="prize"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+
+        {% if table_name == "accidens" %}
+
+        <label for="break_down">Enter new break_down :</label><br>
+        <input type="bool" id="break_down" name="break_down"><br>
+
+        <label for="result">Enter new result :</label><br>
+        <input type="text" id="result" name="result"><br>
+
+        <input type="submit" class="submit_act">
+        {% endif %}
+    </form>
+    
+    <a href="http://127.0.0.1:5000/">Change table</a>
+
+{% endblock %}
