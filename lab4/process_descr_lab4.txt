@@ -1,0 +1,18 @@
+1.Інсталювання:
+
+cd laba4-CRUD
+npm install
+cd laba4/backend
+npm install
+
+2. Увімкнення mongodb 
+
+Запуск node server
+
+cd laba4/backend
+nodemon app.js
+
+Запуск angular frontend
+
+cd laba4
+ng serve -o
